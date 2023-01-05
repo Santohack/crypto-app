@@ -7,7 +7,7 @@ const commonStyle =
   "min-h-[70px] sm:px-0 py-4 cursor-pointer px-2 sm:min-w-[120px] flex justify-center item-center border-[0.5px] border-gray-400 text-white";
 const Welcome = () => {
   const cryptoWallet = () => {
-    console.log("click");
+    console.log("click wallet");
   };
   return (
     <div className="flex w-full justify-center items-center ">
@@ -34,9 +34,12 @@ const Welcome = () => {
             <div className={`${commonStyle}`}>Security</div>
             <div className={`rounded-tr-2xl ${commonStyle}`}>Ethereum</div>
             <div className={`rounded-bl-2xl ${commonStyle}`}>Web 3.0</div>
-            <div className={`${commonStyle}`}>Bitcoin</div>
-            <div className={`rounded-br-2xl ${commonStyle}`}>Currency</div>
+            <div className={`${commonStyle}`}>Low Fee</div>
+            <div className={`rounded-br-2xl ${commonStyle}`}>BlockChain</div>
           </div>
+        </div>
+        <div className="flex flex-col flex-1 justify-start w-full md:m-0 m-10">
+          <div className="flex  flex-col rounded-xl justify-end items-start h-80 md:w-72 w-full my-4 eth-card white-glassmorphism"></div>
         </div>
       </div>
     </div>
