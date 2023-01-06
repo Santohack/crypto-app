@@ -43,15 +43,19 @@ const Welcome = () => {
             <div className="flex flex-col w-full h-full justify-between">
               <div className="flex m-3 justify-between items-start">
                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
-                  <SiEthereum fontSize={20} color="#fff"/>
+                  <SiEthereum fontSize={20} color="#fff" />
                 </div>
-                <BsInfoCircle fontSize={17}  color="#fff"/>
+                <BsInfoCircle fontSize={17} color="#fff" />
               </div>
               <div>
-                <p className="text-white text-light mx-2 ">fdsfsfgfr</p>
+                <p className="text-white text-light mx-2 text-sm ">Address</p>
+                <p className="text-white text-semibold mx-2 text-lg  ">
+                  Ethereum
+                </p>
               </div>
             </div>
           </div>
+          <div className="p-5 sm-w-94 w-full justify-start items-center flex flex-col blue-glassmorphism"></div>
         </div>
       </div>
     </div>
