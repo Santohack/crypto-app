@@ -5,6 +5,17 @@ import { SiEthereum } from "react-icons/si";
 
 const commonStyle =
   "min-h-[70px] sm:px-0 py-4 cursor-pointer px-2 sm:min-w-[120px] flex justify-center item-center border-[0.5px] border-gray-400 text-white";
+const Input = ({ placeholder, value, type, name, handleChange }) => (
+  <input
+    placeholder={placeholder}
+    name={name}
+    value={value}
+    step="00.1"
+    type={type}
+    onChange={(e) => handleChange(e, name)}
+    className="my-2 p-2 text-sm  w-full outline-none border-none bg-transparent text-white white-glassmorphism  "
+  />
+);
 const Welcome = () => {
   const cryptoWallet = () => {
     console.log("click wallet");
@@ -22,7 +33,7 @@ const Welcome = () => {
           </p>
           <button
             type="button"
-            className="flex cursor-pointer p-4 flex-auto w-64 my-5 flex-row justify-center bg-blue-700 rounded-full hover:bg-blue-900"
+            className="flex cursor-pointer p-2  w-64 my-2 flex-row justify-center bg-blue-700 rounded-full hover:bg-blue-900"
             onClick={cryptoWallet}
           >
             <p className="text-white text-base text-semibold">
@@ -55,7 +66,32 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className="p-5 sm-w-94 w-full justify-start items-center flex flex-col blue-glassmorphism"></div>
+          <div className="p-5 sm-w-94 w-full justify-start items-center flex flex-col blue-glassmorphism">
+            <Input
+              placeholder="Address to"
+              name="AddressTo"
+              type="text"
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder="Amount (ETH)"
+              name="amount"
+              type="number"
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder="Gift"
+              name="keyword"
+              type="text"
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder="Enter Message"
+              name="message"
+              type="text"
+              handleChange={() => {}}
+            />
+          </div>
         </div>
       </div>
     </div>
