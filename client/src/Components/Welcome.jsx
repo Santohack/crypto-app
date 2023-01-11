@@ -1,5 +1,6 @@
 import { AiFillPlayCircle } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
+import Loader from "./Loader";
 import React from "react";
 import { SiEthereum } from "react-icons/si";
 
@@ -19,6 +20,9 @@ const Input = ({ placeholder, value, type, name, handleChange }) => (
 const Welcome = () => {
   const cryptoWallet = () => {
     console.log("click wallet");
+  };
+  const handleSubmit = () => {
+    console.log("submitted");
   };
   return (
     <div className="flex w-full justify-center items-center ">
@@ -49,8 +53,8 @@ const Welcome = () => {
             <div className={`rounded-br-2xl ${commonStyle}`}>BlockChain</div>
           </div>
         </div>
-        <div className="flex flex-col flex-1 justify-start w-full md:m-0 m-10">
-          <div className="flex  flex-col rounded-xl justify-end items-start h-80 md:w-72 w-full my-4 eth-card white-glassmorphism">
+        <div className="flex flex-col flex-1 justify-start w-full md:m-0 m-1">
+          <div className="flex  flex-col rounded-xl justify-end items-start h-40 md:w-72 w-full my-4 eth-card white-glassmorphism">
             <div className="flex flex-col w-full h-full justify-between">
               <div className="flex m-3 justify-between items-start">
                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
@@ -66,7 +70,7 @@ const Welcome = () => {
               </div>
             </div>
           </div>
-          <div className="p-5 sm-w-94 w-full justify-start items-center flex flex-col blue-glassmorphism">
+          <div className="p-4 h-auto sm-w-94 w-full justify-start items-center flex flex-col blue-glassmorphism">
             <Input
               placeholder="Address to"
               name="AddressTo"
@@ -91,6 +95,20 @@ const Welcome = () => {
               type="text"
               handleChange={() => {}}
             />
+            <div className="h-[1px] w-full bg-gray-300 my-2 " />
+              {true ? (
+                <Loader />
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className=" p-2 my-2 border-[1px] rounded-full w-full text-white hover:bg-slate-800"
+                >
+                  {" "}
+                  Click now
+                </button>
+              )}
+           
           </div>
         </div>
       </div>
